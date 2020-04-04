@@ -23,16 +23,22 @@ class 通讯录(object):
             for c in range(len(self.a)):
                 if self.a[c][0] == name:
                     print (self.a[c][0],self.a[c][1],self.a[c][2])
+            else:
+                print("姓名输入有误，查找失败")
         elif select_type == 2:
             phoneme = str(input("电话号码 :")).strip()
             for c in range(len(self.a)):
                 if self.a[c][1] == phoneme:
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
+            else:
+                print("电话号码输入有误，查找失败")
         elif select_type == 3:
             idell = int(input("id :"))
             for c in range(len(self.a)):
                 if self.a[c][2] == idell:
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
+            else:
+                print("id输入有误，查找失败")
         elif select_type == 4:
             print(self.a)
         else:
