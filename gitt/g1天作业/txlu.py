@@ -22,23 +22,17 @@ class 通讯录(object):
             name = str(input("请输入姓名 :")).strip()
             for c in range(len(self.a)):
                 if self.a[c][0] == name:
-                    print (self.a[c][0],self.a[c][1],self.a[c][2])
-            else:
-                print("姓名输入有误，查找失败")
+                    print(self.a[c][0],self.a[c][1],self.a[c][2])
         elif select_type == 2:
             phoneme = str(input("电话号码 :")).strip()
             for c in range(len(self.a)):
                 if self.a[c][1] == phoneme:
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
-            else:
-                print("电话号码输入有误，查找失败")
         elif select_type == 3:
             idell = int(input("id :"))
             for c in range(len(self.a)):
                 if self.a[c][2] == idell:
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
-            else:
-                print("id输入有误，查找失败")
         elif select_type == 4:
             print(self.a)
         else:
@@ -53,8 +47,6 @@ class 通讯录(object):
                     self.a[c][0] = str(input("输入新姓名")).strip()
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
                     print("修改成功")
-            else:
-                print("原始姓名输入有误，查找失败")
         elif select_type == 2:
             phoneme = str(input("原始电话号码")).strip()
             for c in range(len(self.a)):
@@ -62,8 +54,6 @@ class 通讯录(object):
                     self.a[c][1] = str(input("输入新电话号码")).strip()
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
                     print("修改成功")
-            else:
-                print("原始电话号码输入有误，查找失败")
         elif select_type == 3:
             idell = int(input("原始id"))
             for c in range(len(self.a)):
@@ -71,8 +61,6 @@ class 通讯录(object):
                     self.a[c][2] = str(input("输入新id")).strip()
                     print(self.a[c][0], self.a[c][1], self.a[c][2])
                     print("修改成功")
-            else:
-                print("原始id输入有误，查找失败")
         else:
             print("要修改的类型不存在")
 
@@ -84,27 +72,21 @@ class 通讯录(object):
                 if self.a[c][0] == name:
                     self.a.pop(c)
                     print("删除成功")
-                    print(self.a[c][0], self.a[c][1], self.a[c][2])
-            else:
-                print("姓名输入有误，查找失败")
+                    print(self.a)
         elif select_type == 2:
             phoneme = str(input("电话号码")).strip()
             for c in range(len(self.a)):
                 if self.a[c][1] == phoneme:
                     self.a.pop(c)
                     print("删除成功")
-                    print(self.a[c][0], self.a[c][1], self.a[c][2])
-            else:
-                print("电话号码输入有误，查找失败")
+                    print(self.a)
         elif select_type == 3:
             idell = int(input("id"))
             for c in range(len(self.a)):
                 if self.a[c][2] == idell:
                     self.a.pop(c)
                     print("删除成功")
-                    print(self.a[c][0], self.a[c][1], self.a[c][2])
-            else:
-                print("id输入有误，查找失败")
+                    print(self.a)
         else:
             print("要删除的类型不存在")
 
