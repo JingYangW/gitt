@@ -84,7 +84,7 @@ class 通讯录(object):
                 if self.a[c][0] == name:
                     self.a.pop(c)
                     print("删除成功")
-                print(self.a[c][0], self.a[c][1], self.a[c][2])
+                    print(self.a[c][0], self.a[c][1], self.a[c][2])
             else:
                 print("姓名输入有误，查找失败")
         elif select_type == 2:
