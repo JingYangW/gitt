@@ -1,4 +1,4 @@
-# 1 使用多线程写一个并发http get请求的程序 可设置并发数和请求总数，返回请求状态码
+# # 1 使用多线程写一个并发http get请求的程序 可设置并发数和请求总数，返回请求状态码
 # import threading
 # import requests
 #
@@ -15,13 +15,13 @@
 #      "https://www.jianshu.com/",
 #      "http://www.51testing.com/html/index.html"
 #      ]
-#
-# for i in a:
-#     thread = threading.Thread(target=httpgetthread, args=(i,))
-#     thread.start()
-#     thread.join()
+# if __name__=="__main__":
+#     for i in a:
+#         thread = threading.Thread(target=httpgetthread, args=(i,))
+#         thread.start()
+#         thread.join()
 
-# 2 使用多进程写一个并发http get请求的程序，可设置并发数和请求总数，返回请求状态码
+# # 2 使用多进程写一个并发http get请求的程序，可设置并发数和请求总数，返回请求状态码
 # import os
 # import requests
 # from multiprocessing import Process
@@ -32,7 +32,7 @@
 #     print("url:", url, "状态码:", res.status_code)
 #
 #
-# a = ["https://github.com/",
+# b = ["https://github.com/",
 #      "https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1",
 #      "http://news.baidu.com/",
 #      "https://tieba.baidu.com/index.html",
@@ -40,7 +40,7 @@
 #      "http://www.51testing.com/html/index.html"
 #      ]
 # if __name__ == "__main__":
-#     for j in a:
+#     for j in b:
 #         pro = Process(target=httpgetprocess, args=(j,))
 #         pro.start()
 #         pro.join()
